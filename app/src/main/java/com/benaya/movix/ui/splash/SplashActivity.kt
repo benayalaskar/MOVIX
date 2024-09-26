@@ -1,4 +1,4 @@
-package com.benaya.movix.ui
+package com.benaya.movix.ui.splash
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,7 +12,7 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-
+        window.statusBarColor = resources.getColor(R.color.splash_status_bar_color, theme)
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

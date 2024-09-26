@@ -42,7 +42,7 @@ class FavoriteFragment : Fragment() {
 
         favoriteViewModel.favoriteFilm.observe(viewLifecycleOwner) { result ->
             if (result.isEmpty()) {
-                binding.favText.text = "You don't have a list of movie favorites yet"
+                binding.favText.text = "Try to add some favorite movies!"
             } else {
                 binding.favText.text = ""
             }

@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        window.statusBarColor = resources.getColor(R.color.status_bar_color, theme)
         setSupportActionBar(binding.toolbar)
         getSupportActionBar()?.hide()
 
