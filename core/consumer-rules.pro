@@ -1,6 +1,6 @@
 ###---------------Begin: proguard configuration for SQLCipher  ----------
-#-keep,includedescriptorclasses class net.sqlcipher.** { *; }
-#-keep,includedescriptorclasses interface net.sqlcipher.** { *; }
+-keep,includedescriptorclasses class net.sqlcipher.** { *; }
+-keep,includedescriptorclasses interface net.sqlcipher.** { *; }
 #
 #
 ###---------------Begin: proguard configuration for Gson ----------
