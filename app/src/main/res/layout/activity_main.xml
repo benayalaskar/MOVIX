@@ -20,7 +20,6 @@
         android:id="@+id/nav_view"
         android:layout_width="412dp"
         android:layout_height="65dp"
-        android:background="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
