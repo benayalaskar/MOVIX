@@ -10,33 +10,39 @@ apply { from("../shared_dependencies.gradle") }
 android {
     namespace = "com.benaya.core"
     compileSdk = 34
-
+    buildFeatures {
+        buildConfig = true
+    }
     defaultConfig {
         minSdk = 24
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
 
-        buildConfigField("String", "API_KEY", "\"Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4ZTE1OWQ5NmRmNzZiYjBkOWNmNGI1YTU2MjIwOTBmOSIsInN1YiI6IjY1MTk0NWY2OTZlMzBiMDEwMDAyZjBlNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.27ffnBULdtVq7oYlxsEHHdjH44f5B1Tx8GdqwkJMmTU\"")
+        buildConfigField(
+            "String",
+            "API_KEY",
+            "\"Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4ZTE1OWQ5NmRmNzZiYjBkOWNmNGI1YTU2MjIwOTBmOSIsInN1YiI6IjY1MTk0NWY2OTZlMzBiMDEwMDAyZjBlNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.27ffnBULdtVq7oYlxsEHHdjH44f5B1Tx8GdqwkJMmTU\""
+        )
     }
-//
-//    buildTypes {
-//        release {
-//            isMinifyEnabled = false
-//            proguardFiles(
-//                getDefaultProguardFile("proguard-android-optimize.txt"),
-//                "proguard-rules.pro"
-//            )
-//        }
-//        debug {
-//            isMinifyEnabled = false
-//            proguardFiles(
-//                getDefaultProguardFile("proguard-android-optimize.txt"),
-//                "proguard-rules.pro"
-//            )
-//        }
-//    }
-//
+
+    buildTypes {
+        release {
+            isMinifyEnabled = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+        debug {
+            isMinifyEnabled = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -73,4 +79,5 @@ dependencies {
     androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.0")
     debugImplementation("androidx.fragment:fragment-testing:1.8.3")
     androidTestImplementation("androidx.test.espresso:espresso-contrib:3.6.1")
+    implementation("com.squareup.okio:okio:3.0.0")
 }
