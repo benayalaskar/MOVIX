@@ -1,8 +1,8 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">MOVIX</string>
     <string name="title_favorite">Favorite</string>
     <string name="toolbar_icon">Toolbar Icon</string>
-    <string name="searchbar_hint">search here...! </string>
+    <string name="searchbar_hint" tools:ignore="TypographyEllipsis">search here...! </string>
     <string name="welcome">Welcome to the MOVIX, Your movie partner!</string>
     <string name="favorite_icon">fav icon</string>
     <string name="favorite">Favorite</string>

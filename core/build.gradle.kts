@@ -79,5 +79,6 @@ dependencies {
     androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.0")
     debugImplementation("androidx.fragment:fragment-testing:1.8.3")
     androidTestImplementation("androidx.test.espresso:espresso-contrib:3.6.1")
+    //noinspection GradleDependency
     implementation("com.squareup.okio:okio:3.0.0")
 }

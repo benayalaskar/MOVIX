@@ -12,6 +12,7 @@ android {
     defaultConfig {
         applicationId = "com.benaya.movix"
         minSdk = 24
+        //noinspection OldTargetApi
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
@@ -60,6 +61,8 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.8.1")
     implementation("androidx.navigation:navigation-ui-ktx:2.8.1")
     implementation("androidx.navigation:navigation-dynamic-features-fragment:2.8.1")
+    //noinspection KtxExtensionAvailable
     implementation("androidx.core:core:1.13.1")
+    //noinspection KtxExtensionAvailable
     implementation("androidx.activity:activity:1.9.2")
 }
