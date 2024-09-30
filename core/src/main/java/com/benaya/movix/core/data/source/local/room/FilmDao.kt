@@ -10,10 +10,10 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface FilmDao {
 
-    @Query("SELECT * FROM film")
-    fun getAllFilm(): Flow<List<FilmEntity>>
+    @Query("SELECT * FROM film WHERE isFavorite = 0")
+    fun getAllNonFavoriteFilms(): Flow<List<FilmEntity>>
 
-    @Query("SELECT * FROM film where isFavorite = 1")
+    @Query("SELECT * FROM film WHERE isFavorite = 1")
     fun getFavoriteFilm(): Flow<List<FilmEntity>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -21,5 +21,4 @@ interface FilmDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertFilm(film: FilmEntity)
-
 }

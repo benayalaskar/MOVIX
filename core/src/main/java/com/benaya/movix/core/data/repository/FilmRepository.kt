@@ -1,5 +1,3 @@
-@file:Suppress("LocalVariableName")
-
 package com.benaya.movix.core.data.repository
 
 import com.benaya.movix.core.data.NetworkBoundResource
@@ -15,7 +13,6 @@ import com.benaya.submissionandrofilmIdexpert.core.utils.DataMapper
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
-@Suppress("VerboseNullabilityAndEmptiness", "VerboseNullabilityAndEmptiness")
 class FilmRepository(
     private val remoteDataSource: RemoteDataSource,
     private val localDataSource: LocalDataSource,
@@ -25,7 +22,8 @@ class FilmRepository(
     override fun getAllFilm(): Flow<Resource<List<Film>>> =
         object : NetworkBoundResource<List<Film>, List<ResultsItem>>(appExecutors) {
             override fun loadFromDB(): Flow<List<Film>> {
-                return localDataSource.getAllFilm().map { DataMapper.mapEntitiesToDomain(it) }
+                return localDataSource.getAllNonFavoriteFilms()
+                    .map { DataMapper.mapEntitiesToDomain(it) }
             }
 
             override fun shouldFetch(data: List<Film>?): Boolean = data == null || data.isEmpty()
@@ -35,7 +33,6 @@ class FilmRepository(
 
             override suspend fun saveCallResult(data: List<ResultsItem>) {
                 val FilmList = DataMapper.mapResponsesToEntities(data)
-
                 localDataSource.insertListFilms(FilmList)
             }
         }.asFlow()
