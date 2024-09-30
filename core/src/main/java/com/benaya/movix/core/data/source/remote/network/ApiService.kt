@@ -1,3 +1,5 @@
+@file:Suppress("RedundantSuppression", "RedundantSuppression", "RedundantSuppression")
+
 package com.benaya.movix.core.data.source.remote.network
 
 import com.benaya.movix.core.data.source.remote.response.FilmResponse
@@ -5,7 +7,9 @@ import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Query
 
-@Suppress("unused", "unused", "unused")
+@Suppress("unused", "unused", "unused", "RedundantSuppression", "RedundantSuppression",
+    "RedundantSuppression"
+)
 interface ApiService {
 
     @GET("movie/popular")

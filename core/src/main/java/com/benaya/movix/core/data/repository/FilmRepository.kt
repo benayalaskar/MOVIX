@@ -1,3 +1,5 @@
+@file:Suppress("VerboseNullabilityAndEmptiness", "LocalVariableName")
+
 package com.benaya.movix.core.data.repository
 
 import com.benaya.movix.core.data.NetworkBoundResource
@@ -13,6 +15,7 @@ import com.benaya.submissionandrofilmIdexpert.core.utils.DataMapper
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
+@Suppress("LocalVariableName")
 class FilmRepository(
     private val remoteDataSource: RemoteDataSource,
     private val localDataSource: LocalDataSource,
