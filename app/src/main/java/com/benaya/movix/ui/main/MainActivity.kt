@@ -10,6 +10,7 @@ import com.benaya.movix.R
 import com.benaya.movix.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
+@Suppress("UsePropertyAccessSyntax")
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

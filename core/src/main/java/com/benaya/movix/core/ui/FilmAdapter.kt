@@ -10,6 +10,7 @@ import com.benaya.core.databinding.ItemFilmBinding
 import com.benaya.movix.core.domain.model.Film
 import com.bumptech.glide.Glide
 
+@Suppress("MemberVisibilityCanBePrivate")
 class FilmAdapter : ListAdapter<Film, FilmAdapter.MyViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {

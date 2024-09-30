@@ -59,7 +59,7 @@ class SearchFragment : Fragment() {
                         binding.progressBar.visibility = View.GONE
                         val data = it.data
 
-                        if (data != null && data.isNotEmpty()) {
+                        if (!data.isNullOrEmpty()) {
                             binding.searchText.text = ""
                             val adapter = FilmAdapter()
                             adapter.submitList(data)
@@ -67,7 +67,7 @@ class SearchFragment : Fragment() {
                         } else {
 //                            binding.searchText.text = getString(R.string.no_search_results)
 //                            binding.searchText.text = "a"
-                            binding.searchText.setText(getString(R.string.no_search_results))
+                            binding.searchText.text = getString(R.string.no_search_results)
                         }
                     }
 
