@@ -5,6 +5,7 @@ import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Query
 
+@Suppress("unused", "unused", "unused")
 interface ApiService {
 
     @GET("movie/popular")

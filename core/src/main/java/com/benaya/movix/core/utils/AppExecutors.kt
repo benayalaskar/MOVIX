@@ -1,3 +1,7 @@
+@file:Suppress("RedundantSuppression", "RedundantSuppression", "RedundantSuppression",
+    "RedundantSuppression", "RedundantSuppression"
+)
+
 package com.benaya.movix.core.utils
 
 import android.os.Handler
