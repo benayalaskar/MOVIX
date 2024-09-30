@@ -9,10 +9,6 @@ apply { from("../shared_dependencies.gradle") }
 android {
     namespace = "com.benaya.movix"
     compileSdk = 34
-    buildFeatures {
-        buildConfig = true
-    }
-
     defaultConfig {
         applicationId = "com.benaya.movix"
         minSdk = 24
