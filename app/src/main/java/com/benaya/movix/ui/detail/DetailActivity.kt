@@ -48,7 +48,7 @@ class DetailActivity : AppCompatActivity() {
             setStatusFavorite(statusFavorite, true)
         }
 
-        // Add scroll listener to show/hide the favorite button when user scrolling the page
+        // Add scroll listener to show/hide the favorite button when user scrolling the detail page
         binding.scrollView.setOnScrollChangeListener { _, _, scrollY, _, oldScrollY ->
             if (scrollY > oldScrollY) {
                 binding.fabFav.hide()
